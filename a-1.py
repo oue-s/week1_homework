@@ -1,1 +1,0 @@
-users = ["Bob", "Tom", "Ken"]
