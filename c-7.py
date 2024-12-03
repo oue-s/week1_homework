@@ -22,6 +22,11 @@ class Customer:
             return 500
 
     def info_csv(self):
+        fee = self.entry_fee()
+        ff_name = self.full_name()
+        return ff_name + "," + str(self.age) + "," + str(fee)
+
+    def info_tab(self):
         return self.full_name() + "\t" + str(self.age) + "\t" + str(self.entry_fee())
 
 
@@ -31,7 +36,7 @@ ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=75)
 michelle = Customer(first_name="Michelle", family_name="Tanner", age=3)
 
 # 省略
-print(ken.info_csv())  # "Ken Tanaka,15,1000" という値を出力
-print(tom.info_csv())  # "Tom Ford,57,1500" という値を出力
-print(ieyasu.info_csv())  # "Ieyasu Tokugawa,75,1200" という値を出力
-print(michelle.info_csv())  # 0 という値を出力
+print(ken.info_tab())  # "Ken Tanaka,15,1000" という値を出力
+print(tom.info_tab())  # "Tom Ford,57,1500" という値を出力
+print(ieyasu.info_tab())  # "Ieyasu Tokugawa,75,1200" という値を出力
+print(michelle.info_tab())  # 0 という値を出力
