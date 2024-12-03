@@ -8,6 +8,7 @@ class Square:
 
     def area(self):
         result_area = format((self.side) ** 2, ".2f")
+        result_area = result_area
         return result_area
 
     def diagonal(self):

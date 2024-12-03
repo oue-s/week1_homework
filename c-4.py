@@ -20,7 +20,8 @@ class Customer:
 
     def info_csv(self):
         fee = self.entry_fee()
-        return self.first_name + " " + self.family_name + "," + str(self.age) + "," + str(fee)
+        ff_name = self.full_name()
+        return ff_name + "," + str(self.age) + "," + str(fee)
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
