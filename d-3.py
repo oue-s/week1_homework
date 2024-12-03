@@ -7,12 +7,19 @@ class Square:
         self.side = side
 
     def area(self):
-        result_area = format((self.side) ** 2, ".2f")
-        result_area = result_area
+        result_area = self.side**2
+        if result_area * 100 % 100 == 0:
+            result_area = format(result_area, ".0f")
+        else:
+            result_area = format((self.side) ** 2, ".2f")
         return result_area
 
     def diagonal(self):
-        result_diagonal = format(math.sqrt(self.side**2 + self.side**2), ".2f")
+        result_diagonal = math.sqrt(self.side**2 + self.side**2)
+        if result_diagonal * 100 % 100 == 0:
+            result_diagonal = format(result_diagonal, ".0f")
+        else:
+            result_diagonal = format(result_diagonal, ".2f")
         return result_diagonal
 
 
